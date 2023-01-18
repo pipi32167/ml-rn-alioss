@@ -1,6 +1,6 @@
-# rn-alioss
+# ml-rn-alioss
 
-AliYun oss for react native，支持 Android + iOS，感谢[aliyun-oss-react-native](https://github.com/aliyun/aliyun-oss-react-native)提供的基础。 首先向各位声明，本库是在 aliyun-oss-react-native 基础上进行重写,但因常年未曾维护，旧版SDK 等问题，最终决定开一个新仓库，提供给新项目使用。
+本库是在使用rn-alioss库的时候发现的问题 并进行了修复
 
 ## Environment
 
@@ -24,11 +24,11 @@ AliYun oss for react native，支持 Android + iOS，感谢[aliyun-oss-react-nat
 
 
 ```sh
-npm install rn-alioss
+npm install ml-rn-alioss
 
 or
 
-yarn add rn-alioss
+yarn add ml-rn-alioss
 ```
 
 ### iOS
