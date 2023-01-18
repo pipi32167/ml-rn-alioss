@@ -35,7 +35,7 @@ public class AliOssDownloadManager {
         mOSS = oss;
     }
 
-    public void asyncDownload(final ReactContext context,String bucketName, String ossFile, String updateDate, ReadableMap options, final Promise promise) {
+    public void asyncDownload(final ReactContext context,String bucketName, String ossFile, String path, ReadableMap options, final Promise promise) {
         GetObjectRequest get = new GetObjectRequest(bucketName, ossFile);
 
         String xOssPositon = options.getString("x-oss-process");
@@ -55,10 +55,7 @@ public class AliOssDownloadManager {
                 int len;
 
                 FileOutputStream outputStream = null;
-                String localImgURL = Environment.getExternalStorageDirectory().getAbsolutePath() +
-                        "/ImgCache/" +
-                        System.currentTimeMillis() +
-                        ".jpg";
+                String localImgURL = path + ossFile;
                 Log.d("localImgURL", localImgURL);
                 File cacheFile = new File(localImgURL);
                 if (!cacheFile.exists()) {
